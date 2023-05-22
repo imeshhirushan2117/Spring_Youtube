@@ -16,4 +16,11 @@ public class UserController {
     public String saveUser(){
         return "User Save !";
     }
+
+    @PutMapping("/updateUser")
+        public String updateUser(){
+            return "Update User !";
+        }
+
+
 }
