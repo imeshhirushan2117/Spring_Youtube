@@ -26,4 +26,9 @@ public class CustomerController {
 
     }
 
+    @PutMapping("/updateCustomer")
+    public CustomerDTO updateCustomer(@RequestBody CustomerDTO customerDTO){
+        return customerService.updateCustomer(customerDTO);
+    }
+
 }

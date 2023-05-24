@@ -33,4 +33,11 @@ public class CustomerService {
         return modelMapper.map(customerList, new TypeToken<List<CustomerDTO>>(){
         }.getType());
     }
+
+    public CustomerDTO updateCustomer(CustomerDTO customerDTO){
+        customerRepo.save(modelMapper.map(customerDTO, Customer.class));
+        return customerDTO;
+    }
+
+
 }
