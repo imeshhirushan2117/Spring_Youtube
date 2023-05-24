@@ -39,5 +39,10 @@ public class CustomerService {
         return customerDTO;
     }
 
+    public boolean deleteCustomer (CustomerDTO customerDTO){
+        customerRepo.delete(modelMapper.map(customerDTO,Customer.class));
+        return true;
+    }
+
 
 }
